@@ -1,0 +1,22 @@
+[project]
+name = "deepseek-agent"
+version = "1.0.0"
+description = "AI coding agent powered by DeepSeek via browser automation — no API key needed"
+authors = [
+    { name = "Xuan Dich", email = "dich.dx@gmail.com" }
+]
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.64.1",
+    "pyvirtualdisplay>=3.0",
+]
+
+[project.scripts]
+deepseek-agent = "deepseek_agent.cli:main"
+dsa = "deepseek_agent.cli:main"
+deepseek-agent-calibrate = "deepseek_agent.calibrate:main"
+
+[build-system]
+requires = ["uv_build>=0.11.16,<0.12.0"]
+build-backend = "uv_build"
